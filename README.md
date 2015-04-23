@@ -6,7 +6,7 @@ This is an example service implementation for a multi-tenant system with tenant 
 
 In this example, we have a 'master' database. This database has 'Tenant' table which stores all the tenant information. Refer [Tenant.java] (https://github.com/kcthota/play-ebean-multitenant-example/blob/master/app/master/Tenant.java).
 
-And each tenant has it's own database and in our example we have 'User' table defined in these tenant databases. Refer [User.java] (https://github.com/kcthota/play-ebean-multitenant-example/blob/master/app/models/User.java).
+And each tenant has its own database and in our example we have 'User' table defined in these tenant databases. Refer [User.java] (https://github.com/kcthota/play-ebean-multitenant-example/blob/master/app/models/User.java).
 
 Every HTTP call will have the tenantId value in request headers, which is used to connect to the appropriate database. Using Play's Action composition mechanism, we created TenantAwareAction which would be executed for all annotated classes or methods.
 
